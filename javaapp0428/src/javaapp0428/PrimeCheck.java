@@ -54,7 +54,7 @@ public class PrimeCheck {
 					num = num+j;
 					break;	
 				}
-				if()
+				//if()
 				
 			}
 			/*if (temp==false) {
