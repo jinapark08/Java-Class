@@ -14,9 +14,12 @@ public class OracleConnectPractice {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			System.out.println("드라이버 클래스 로드 성공");
 			// 데이터베이스 접속
-			Connection con = DriverManager.getConnection("jdbc:oracle:thin:@192.168.0.200:1521:xe", "user02", "user02");
+			Connection con = DriverManager.getConnection
+					("jdbc:oracle:thin:@192.168.0.200:1521:xe",
+							"user02", "user02");
 			PreparedStatement pstmt = con.prepareStatement(
-					"INSERT INTO SIGNUP(" + "NUM,COMPANY,CONTENT,DETAIL,COMPANYPHONE,ADDRESS,NAME,SAMPLE,CONSTRUCT) "
+					"INSERT INTO SIGNUP(" + "NUM,COMPANY,CONTENT,DETAIL,"
+							+ "COMPANYPHONE,ADDRESS,NAME,SAMPLE,CONSTRUCT) "
 							+ "VALUES (?,?,?,?,?,?,?,?,?)");
 			pstmt.setInt(1, 1);
 			pstmt.setString(2, "성안디앤씨");
@@ -39,7 +42,7 @@ public class OracleConnectPractice {
 			con.close();
 		} catch (Exception e) {
 			System.err.println("접속실패");
-			System.err.println(e.getMessage());C
+			System.err.println(e.getMessage());
 		}
 
 	}

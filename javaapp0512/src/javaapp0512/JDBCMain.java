@@ -11,7 +11,9 @@ public class JDBCMain {
 			// 1. 데이터베이스 드라이버 클래스 로드
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			// 2.데이터베이스 접속 인스턴스 생성
-			Connection con = DriverManager.getConnection("jdbc:oracle:thin:@192.168.0.200:1521:xe", "user02", "user02");
+			Connection con = DriverManager.getConnection
+					("jdbc:oracle:thin:@192.168.0.200:1521:xe", 
+							"user02", "user02");
 
 			//3.SQL실행객체 삭제
 			PreparedStatement pstmt = con.prepareStatement
