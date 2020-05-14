@@ -1,5 +1,7 @@
 package javaapp0513;
 
+import java.sql.Date;
+
 public class ITEM {
 
 
@@ -8,12 +10,12 @@ public class ITEM {
 		private String country;
 		private String unit;
 		private int price;
-		private date receivedate;
+		private Date receivedate;
 		public ITEM() {
 			super();
 			// TODO Auto-generated constructor stub
 		}
-		public ITEM(String code, String name, String country, String unit, int price, date receivedate) {
+		public ITEM(String code, String name, String country, String unit, int price, Date receivedate) {
 			super();
 			this.code = code;
 			this.name = name;
@@ -22,7 +24,7 @@ public class ITEM {
 			this.price = price;
 			this.receivedate = receivedate;
 		}
-		public String getCode() {
+		public String recevedate() {
 			return code;
 		}
 		public void setCode(String code) {
@@ -52,10 +54,13 @@ public class ITEM {
 		public void setPrice(int price) {
 			this.price = price;
 		}
-		public date getReceivedate() {
+		public String getCode() {
+			return code;
+		}
+		public Date getReceivedate() {
 			return receivedate;
 		}
-		public void setReceivedate(date receivedate) {
+		public void setReceivedate(Date receivedate) {
 			this.receivedate = receivedate;
 		}
 		@Override
